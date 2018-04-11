@@ -28,7 +28,6 @@ class DCK():
     def find_end(self, endChar, url):
         for index, c in enumerate(url[::-1]):
             if c==endChar:
-                print(url[-index-1])
                 return -index-1
         
         return None
