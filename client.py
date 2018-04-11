@@ -10,7 +10,7 @@ entity_tuple = [(Company, "http://data.coding.kitchen/api/companies/1"),
     (League, "http://data.coding.kitchen/api/leagues/"),
     (City, "http://data.coding.kitchen/api/cities/1"),
     (Department, "http://data.coding.kitchen/api/departments/1"),
-    (State,"http://data.coding.kitchen/api/states/),
+    (State,"http://data.coding.kitchen/api/states/"),
     (Exchange, "http://data.coding.kitchen/api/exchanges/")]
 
 for value in entity_tuple:
