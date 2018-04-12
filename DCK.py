@@ -28,7 +28,7 @@ class DCK():
     def find_end(self, endChar, url):
         for index, c in enumerate(url[::-1]):
             if c==endChar:
-                return -index-1
+                return len(url)-index-1
         
         return None
 
@@ -36,7 +36,7 @@ class DCK():
         index=self.find_end('/', url)
 
         if index:
-            return url[:index+1]
+            return url[: index+1]
         else:
             return None
 
@@ -45,6 +45,7 @@ class DCK():
 
         if base_url:
             group_data=self.get_json(next_url)
+            page_id=1
             
             while group_data:
                 print(next_url)
@@ -53,12 +54,9 @@ class DCK():
                     print(single_url)
 
                     self.get_entity(obj, single_url)
-                    
-                endChar="/"
-                index=self.find_end(next_url, endChar)
                 
                 page_id=page_id+1
-                next_url=base_url+page_id
+                next_url=base_url+str(page_id)
                 group_data=self.get_json(next_url)
 
                 # group_data=None

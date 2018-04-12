@@ -16,3 +16,4 @@ entity_tuple = [(Company, "http://data.coding.kitchen/api/companies/1"),
 for value in entity_tuple:
     obj, next_url = value
     dck.populate_table(obj, next_url)
+
